@@ -22,24 +22,21 @@ public class Pacman_Movement : MonoBehaviour
         GetComponent<Rigidbody2D>().MovePosition(position);
 
         //Input para mover o pacman
-        if ((Vector2)transform.position == pacmanDestination)
+        if (Input.GetKey(KeyCode.UpArrow) && validPath(Vector2.up))
         {
-            if (Input.GetKey(KeyCode.UpArrow) && validPath(Vector2.up))
-            {
-                pacmanDestination = (Vector2)transform.position + Vector2.up;
-            }
-            else if (Input.GetKey(KeyCode.DownArrow) && validPath(Vector2.down))
-            {
-                pacmanDestination = (Vector2)transform.position + Vector2.down;
-            }
-            else if (Input.GetKey(KeyCode.LeftArrow) && validPath(Vector2.left))
-            {
-                pacmanDestination = (Vector2)transform.position + Vector2.left;
-            }
-            else if (Input.GetKey(KeyCode.RightArrow) && validPath(Vector2.right))
-            {
-                pacmanDestination = (Vector2)transform.position + Vector2.right;
-            }
+            pacmanDestination = (Vector2)transform.position + Vector2.up;
+        }
+        else if (Input.GetKey(KeyCode.DownArrow) && validPath(Vector2.down))
+        {
+            pacmanDestination = (Vector2)transform.position + Vector2.down;
+        }
+        else if (Input.GetKey(KeyCode.LeftArrow) && validPath(Vector2.left))
+        {
+            pacmanDestination = (Vector2)transform.position + Vector2.left;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow) && validPath(Vector2.right))
+        {
+            pacmanDestination = (Vector2)transform.position + Vector2.right;
         }
 
         //Animação

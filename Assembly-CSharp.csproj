@@ -61,7 +61,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ComidaScript.cs" />
+    <Compile Include="Assets\Scripts\BlinkyMovement.cs" />
+    <Compile Include="Assets\Scripts\Mapa.cs" />
     <Compile Include="Assets\Scripts\PacDot.cs" />
     <Compile Include="Assets\Scripts\Pacman_Movement.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
