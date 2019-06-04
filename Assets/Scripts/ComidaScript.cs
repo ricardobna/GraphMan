@@ -11,12 +11,6 @@ public class ComidaScript : MonoBehaviour
         this.gameObject.SetActive(true);
     }
 
-    void comer()
-    {
-        this.gameObject.SetActive(false);
-    }
-}
-
     // Update is called once per frame
     void Update()
     {
